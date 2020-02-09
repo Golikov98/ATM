@@ -8,5 +8,6 @@ namespace ATM
 {
     class Project
     {
+        List<ATM> ATMCondition = new List<ATM>();
     }
 }
