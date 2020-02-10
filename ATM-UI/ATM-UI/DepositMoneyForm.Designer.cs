@@ -69,6 +69,7 @@
             // 
             // InsertButton
             // 
+            this.InsertButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.InsertButton.BackColor = System.Drawing.Color.Green;
             this.InsertButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.InsertButton.ForeColor = System.Drawing.SystemColors.Window;
@@ -82,6 +83,7 @@
             // 
             // CancelButton
             // 
+            this.CancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.CancelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CancelButton.ForeColor = System.Drawing.SystemColors.Window;
@@ -95,6 +97,7 @@
             // 
             // DepositMoneyGroupBox
             // 
+            this.DepositMoneyGroupBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.DepositMoneyGroupBox.Controls.Add(this.Amount5000Button);
             this.DepositMoneyGroupBox.Controls.Add(this.Amount2000Button);
             this.DepositMoneyGroupBox.Controls.Add(this.Amount1000Button);

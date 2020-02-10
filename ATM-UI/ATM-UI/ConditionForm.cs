@@ -78,25 +78,49 @@ namespace ATM_UI
         private void ConditionForm_Load(object sender, EventArgs e)
         {
             _project = ProjectManager.LoadFromFile(@"..\ATMCondition.txt");
-            var CurrentValueList = _project.ATMCondition;
-            string textValueTotal = Convert.ToString(CurrentValueList[0].TotalAvailabelAmount);
-            TotalSumTextBox.Text = textValueTotal;
-           string textValue5000 = Convert.ToString(CurrentValueList[0].AvailabelAmount5000);
-            Bancnot5000TextBox.Text = textValue5000;
-            string textValue2000 = Convert.ToString(CurrentValueList[0].AvailabelAmount2000);
-            Bancnot2000TextBox.Text = textValue2000;
-            string textValue1000 = Convert.ToString(CurrentValueList[0].AvailabelAmount1000);
-            Bancnot1000TextBox.Text = textValue1000;
-            string textValue500 = Convert.ToString(CurrentValueList[0].AvailabelAmount500);
-            Bancnot500TextBox.Text = textValue500;
-            string textValue200 = Convert.ToString(CurrentValueList[0].AvailabelAmount200);
-            Bancnot200TextBox.Text = textValue200;
-            string textValue100 = Convert.ToString(CurrentValueList[0].AvailabelAmount100);
-            Bancnot100TextBox.Text = textValue100;
-            string textValue50 = Convert.ToString(CurrentValueList[0].AvailabelAmount50);
-            Bancnot50TextBox.Text = textValue50;
-            string textValue10 = Convert.ToString(CurrentValueList[0].AvailabelAmount10);
-            Bancnot10TextBox.Text = textValue10;
+            if (_project != null)
+            {
+                var CurrentValueList = _project.ATMCondition;
+                string textValueTotal = Convert.ToString(CurrentValueList[0].TotalAvailabelAmount);
+                TotalSumTextBox.Text = textValueTotal;
+                string textValue5000 = Convert.ToString(CurrentValueList[0].AvailabelAmount5000);
+                Bancnot5000TextBox.Text = textValue5000;
+                string textValue2000 = Convert.ToString(CurrentValueList[0].AvailabelAmount2000);
+                Bancnot2000TextBox.Text = textValue2000;
+                string textValue1000 = Convert.ToString(CurrentValueList[0].AvailabelAmount1000);
+                Bancnot1000TextBox.Text = textValue1000;
+                string textValue500 = Convert.ToString(CurrentValueList[0].AvailabelAmount500);
+                Bancnot500TextBox.Text = textValue500;
+                string textValue200 = Convert.ToString(CurrentValueList[0].AvailabelAmount200);
+                Bancnot200TextBox.Text = textValue200;
+                string textValue100 = Convert.ToString(CurrentValueList[0].AvailabelAmount100);
+                Bancnot100TextBox.Text = textValue100;
+                string textValue50 = Convert.ToString(CurrentValueList[0].AvailabelAmount50);
+                Bancnot50TextBox.Text = textValue50;
+                string textValue10 = Convert.ToString(CurrentValueList[0].AvailabelAmount10);
+                Bancnot10TextBox.Text = textValue10;
+            }
+            else
+            {
+                string textValueTotal = Convert.ToString('0');
+                TotalSumTextBox.Text = textValueTotal;
+                string textValue5000 = Convert.ToString('0');
+                Bancnot5000TextBox.Text = textValue5000;
+                string textValue2000 = Convert.ToString('0');
+                Bancnot2000TextBox.Text = textValue2000;
+                string textValue1000 = Convert.ToString('0');
+                Bancnot1000TextBox.Text = textValue1000;
+                string textValue500 = Convert.ToString('0');
+                Bancnot500TextBox.Text = textValue500;
+                string textValue200 = Convert.ToString('0');
+                Bancnot200TextBox.Text = textValue200;
+                string textValue100 = Convert.ToString('0');
+                Bancnot100TextBox.Text = textValue100;
+                string textValue50 = Convert.ToString('0');
+                Bancnot50TextBox.Text = textValue50;
+                string textValue10 = Convert.ToString('0');
+                Bancnot10TextBox.Text = textValue10;
+            }
         }
     }
 }

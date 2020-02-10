@@ -46,6 +46,7 @@
             // 
             // WithdrawGroupBox
             // 
+            this.WithdrawGroupBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.WithdrawGroupBox.Controls.Add(this.Amount5000Button);
             this.WithdrawGroupBox.Controls.Add(this.Amount2000Button);
             this.WithdrawGroupBox.Controls.Add(this.Amount1000Button);
