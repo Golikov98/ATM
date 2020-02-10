@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConditionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConditionForm.Designer.cs">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepositMoneyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepositMoneyForm.Designer.cs">
+      <DependentUpon>DepositMoneyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +66,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WithdrawMoneyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WithdrawMoneyForm.Designer.cs">
+      <DependentUpon>WithdrawMoneyForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ConditionForm.resx">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepositMoneyForm.resx">
+      <DependentUpon>DepositMoneyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +90,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="WithdrawMoneyForm.resx">
+      <DependentUpon>WithdrawMoneyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

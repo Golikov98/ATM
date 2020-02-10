@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace ATM
 {
-    class Project
+    /// <summary>
+    /// Класс проекта
+    /// </summary>
+    [Serializable]
+    public class Project
     {
-        List<ATM> ATMCondition = new List<ATM>();
+        public List<ATMLogic> ATMCondition = new List<ATMLogic>();
     }
 }
