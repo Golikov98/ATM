@@ -175,6 +175,17 @@ namespace ATM_UI
                     {
                         DialogResult result = MessageBox.Show("Недостаточно средств.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Show();
+
+                        //Передаем данные в абстрактный класс для проверки
+                        _ATMLogic.AvailabelAmount10 = CurrentLoadConditions[0].AvailabelAmount10;
+                        _ATMLogic.AvailabelAmount50 = CurrentLoadConditions[0].AvailabelAmount50;
+                        _ATMLogic.AvailabelAmount100 = CurrentLoadConditions[0].AvailabelAmount100;
+                        _ATMLogic.AvailabelAmount200 = CurrentLoadConditions[0].AvailabelAmount200;
+                        _ATMLogic.AvailabelAmount500 = CurrentLoadConditions[0].AvailabelAmount500;
+                        _ATMLogic.AvailabelAmount1000 = CurrentLoadConditions[0].AvailabelAmount1000;
+                        _ATMLogic.AvailabelAmount2000 = CurrentLoadConditions[0].AvailabelAmount2000;
+                        _ATMLogic.AvailabelAmount5000 = CurrentLoadConditions[0].AvailabelAmount5000;
+                        _ATMLogic.TotalAvailabelAmount = CurrentLoadConditions[0].TotalAvailabelAmount;
                     }
                 }
             }
@@ -258,6 +269,11 @@ namespace ATM_UI
         private void CancelButton_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+        }
+
+        private void WithdrawMoneyForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

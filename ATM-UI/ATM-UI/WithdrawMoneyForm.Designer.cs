@@ -227,6 +227,7 @@
             this.Controls.Add(this.WithdrawGroupBox);
             this.Name = "WithdrawMoneyForm";
             this.Text = "WithdrawMoney";
+            this.Load += new System.EventHandler(this.WithdrawMoneyForm_Load);
             this.WithdrawGroupBox.ResumeLayout(false);
             this.WithdrawGroupBox.PerformLayout();
             this.ResumeLayout(false);
