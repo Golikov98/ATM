@@ -8,6 +8,9 @@ using NUnit.Framework;
 
 namespace ATMUnitTests
 {
+    /// <summary>
+    /// Класс ATMLogicUnitTest, содержащий Unit-тесты для тестирования класса ATMLogic
+    /// </summary>
     [TestFixture]
     public class ATMLogicUnitTest
     {

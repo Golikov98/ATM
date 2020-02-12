@@ -13,6 +13,7 @@ namespace ATM
     [Serializable]
     public class Project
     {
+        //Создание списка ATMCondition
         public List<ATMLogic> ATMCondition = new List<ATMLogic>();
     }
 }

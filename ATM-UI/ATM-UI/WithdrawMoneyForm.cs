@@ -11,8 +11,12 @@ using ATM;
 
 namespace ATM_UI
 {
+    /// <summary>
+    /// Форма, с помощью которой пользователь может снять средства
+    /// </summary>
     public partial class WithdrawMoneyForm : Form
     {
+        //Создаем глобальные переменные
         int Sum;
         int Banknote10 = 0;
         int Banknote50 = 0;
@@ -35,14 +39,18 @@ namespace ATM_UI
         {
             this.DialogResult = DialogResult.OK;
 
+            //Считываем данные из файла в переменную _project
             _project = ProjectManager.LoadFromFile(@"..\ATMCondition.txt");
 
+            //Если файл отсутствует
             if (_project == null)
             {
+                //Выводим сообщение о том, что банкомат не пополнялся
                 DialogResult result = MessageBox.Show("Банкомат не пополнялся, продолжить?", "Ошибка", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 this.Show();
             }
             
+            //Если выдаваемая сумма меньше 150 000
             if (Sum <= 150000)
             {
                 ATMLogic atmLogic = new ATMLogic();               
@@ -192,7 +200,6 @@ namespace ATM_UI
             else
             {
                 DialogResult result = MessageBox.Show("Нельзя выдать более 150 000", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 this.Show();
             }
         }

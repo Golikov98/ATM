@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace ATM
 {
+    /// <summary>
+    /// Класс ATMLogic, содержищий поля _availabelAmount10, _availabelAmount50, _availabelAmount100, _availabelAmount200,
+    /// _availabelAmount500, _availabelAmount1000, _availabelAmount2000, _availabelAmount5000, _totalAvailabelAmount.
+    /// </summary>
     public class ATMLogic
     {
         private int _availabelAmount10;

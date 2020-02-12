@@ -13,6 +13,7 @@ namespace ATM_UI
 {
     public partial class DepositMoneyForm : Form
     {
+        //Создаем глобальные переменные
         int Sum;
         int Banknote10 = 0;
         int Banknote50 = 0;
@@ -109,13 +110,17 @@ namespace ATM_UI
         {
             ATMLogic atmLogic = new ATMLogic();
             this.DialogResult = DialogResult.OK;
+
+            //Записываем в переменную _project данные из файла
             _project = ProjectManager.LoadFromFile(@"..\ATMCondition.txt");
 
+            //Если файл отсутствует
             if (_project == null)
             {
                 //Проверяем вносимую сумму
                 if (Sum <= 300000)
                 {
+                    //Проверка на кол-во вносимых купюр номиналом 10
                     if (Banknote10 <= 15000)
                     {
                         _ATMLogic.AvailabelAmount10 = Banknote10;
@@ -126,6 +131,7 @@ namespace ATM_UI
                         this.Show();
                     }
 
+                    //Проверка на кол-во вносимых купюр номиналом 50
                     if (Banknote50 <= 15000)
                     {
                         _ATMLogic.AvailabelAmount50 = Banknote50;
@@ -136,6 +142,7 @@ namespace ATM_UI
                         this.Show();
                     }
 
+                    //Проверка на кол-во вносимых купюр номиналом 100
                     if (Banknote100 <= 60000)
                     {
                         _ATMLogic.AvailabelAmount100 = Banknote100;
@@ -146,6 +153,7 @@ namespace ATM_UI
                         this.Show();
                     }
 
+                    //Проверка на кол-во вносимых купюр номиналом 200
                     if (Banknote200 <= 60000)
                     {
                         _ATMLogic.AvailabelAmount200 = Banknote200;
@@ -156,6 +164,7 @@ namespace ATM_UI
                         this.Show();
                     }
 
+                    //Проверка на кол-во вносимых купюр номиналом 500
                     if (Banknote500 <= 300000)
                     {
                         _ATMLogic.AvailabelAmount500 = Banknote500;
@@ -166,6 +175,7 @@ namespace ATM_UI
                         this.Show();
                     }
 
+                    //Проверка на кол-во вносимых купюр номиналом 1000
                     if (Banknote1000 <= 600000)
                     {
                         _ATMLogic.AvailabelAmount1000 = Banknote1000;
@@ -176,6 +186,7 @@ namespace ATM_UI
                         this.Show();
                     }
 
+                    //Проверка на кол-во вносимых купюр номиналом 2000
                     if (Banknote2000 <= 600000)
                     {
                         _ATMLogic.AvailabelAmount2000 = Banknote2000;
@@ -186,6 +197,7 @@ namespace ATM_UI
                         this.Show();
                     }
 
+                    //Проверка на кол-во вносимых купюр номиналом 5000
                     if (Banknote5000 <= 750000)
                     {
                         _ATMLogic.AvailabelAmount5000 = Banknote5000;
@@ -216,11 +228,16 @@ namespace ATM_UI
                 }
             }
 
+
+            //Если файл не отсутствует
             if (_project != null)
             {
                 var CurrentLoadConditions = _project.ATMCondition;
+
+                //Если сумма, хранящаяся в данкомате + сумма, вносимая пользователем меньше либо равно 300 000
                 if (CurrentLoadConditions[0].TotalAvailabelAmount + Sum <= 300000)
                 {
+                    //Проверка наличия места в хранилище купюр номиналом 10
                     if (CurrentLoadConditions[0].AvailabelAmount10 + Banknote10 <= 15000)
                     {
                         CurrentLoadConditions[0].AvailabelAmount10 += Banknote10;
@@ -231,6 +248,7 @@ namespace ATM_UI
                         this.Show();
                     }
 
+                    //Проверка наличия места в хранилище купюр номиналом 50
                     if (CurrentLoadConditions[0].AvailabelAmount50 + Banknote50 <= 15000)
                     {
                         CurrentLoadConditions[0].AvailabelAmount50 += Banknote50;
@@ -241,6 +259,7 @@ namespace ATM_UI
                         this.Show();
                     }
 
+                    //Проверка наличия места в хранилище купюр номиналом 100
                     if (CurrentLoadConditions[0].AvailabelAmount100 + Banknote100 <= 60000)
                     {
                         CurrentLoadConditions[0].AvailabelAmount100 += Banknote100;
@@ -251,6 +270,7 @@ namespace ATM_UI
                         this.Show();
                     }
 
+                    //Проверка наличия места в хранилище купюр номиналом 200
                     if (CurrentLoadConditions[0].AvailabelAmount200 + Banknote200 <= 60000)
                     {
                         CurrentLoadConditions[0].AvailabelAmount200 += Banknote200;
@@ -261,6 +281,7 @@ namespace ATM_UI
                         this.Show();
                     }
 
+                    //Проверка наличия места в хранилище купюр номиналом 500
                     if (CurrentLoadConditions[0].AvailabelAmount500 + Banknote500 <= 300000)
                     {
                         CurrentLoadConditions[0].AvailabelAmount500 += Banknote500;
@@ -271,6 +292,7 @@ namespace ATM_UI
                         this.Show();
                     }
 
+                    //Проверка наличия места в хранилище купюр номиналом 1000
                     if (CurrentLoadConditions[0].AvailabelAmount1000 + Banknote1000 <= 600000)
                     {
                         CurrentLoadConditions[0].AvailabelAmount1000 += Banknote1000;
@@ -281,6 +303,7 @@ namespace ATM_UI
                         this.Show();
                     }
 
+                    //Проверка наличия места в хранилище купюр номиналом 2000
                     if (CurrentLoadConditions[0].AvailabelAmount2000 + Banknote2000 <= 600000)
                     {
                         CurrentLoadConditions[0].AvailabelAmount2000 += Banknote2000;
@@ -291,6 +314,7 @@ namespace ATM_UI
                         this.Show();
                     }
 
+                    //Проверка наличия места в хранилище купюр номиналом 5000
                     if (CurrentLoadConditions[0].AvailabelAmount5000 + Banknote5000 <= 750000)
                     {
                         CurrentLoadConditions[0].AvailabelAmount5000 += Banknote5000;
